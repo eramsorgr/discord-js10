@@ -1,2 +1,2 @@
-# discord-js10
+# Discord Bot Hosting
 https://securesrv.io
