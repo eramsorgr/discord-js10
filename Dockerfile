@@ -6,7 +6,7 @@ RUN apt update \
     && apt upgrade -y \
     && apt autoremove -y \
     && apt autoclean \
-    && apt -y install curl software-properties-common locales git \
+    && apt -y install curl software-properties-common locales git wget unzip \
     && useradd -d /home/container -m container
 
     # Ensure UTF-8
@@ -16,8 +16,7 @@ ENV LC_ALL en_US.UTF-8
 
     # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
-    && apt -y install nodejs \
-    && apt -y install wget
+    && apt -y install nodejs
 
 USER container
 ENV  USER container
