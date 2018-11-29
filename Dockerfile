@@ -16,7 +16,8 @@ ENV LC_ALL en_US.UTF-8
 
     # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
-    && apt -y install nodejs
+    && apt -y install nodejs \
+    && npm install discord.js node-opus opusscript
 
 USER container
 ENV  USER container
