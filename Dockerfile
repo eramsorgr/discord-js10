@@ -6,7 +6,7 @@ RUN apt update \
     && apt upgrade -y \
     && apt autoremove -y \
     && apt autoclean \
-    && apt -y install curl software-properties-common locales git wget unzip \
+    && apt -y install curl software-properties-common locales git \
     && useradd -d /home/container -m container
 
     # Ensure UTF-8
