@@ -17,7 +17,8 @@ ENV LC_ALL en_US.UTF-8
     # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
     && apt -y install nodejs node-gyp \
-    && npm install discord.js node-opus opusscript
+    && npm install discord.js node-opus opusscript \
+    && npm install sqlite3 --build-from-source
 
 USER container
 ENV  USER container
